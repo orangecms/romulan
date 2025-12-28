@@ -189,12 +189,14 @@ fn print_intel(rom: &intel::Rom, _print_json: bool, verbose: bool) {
         let v = me.version().unwrap_or("Unknown".to_string());
         println!("    Version: {v}");
         let d = me.data();
+        /*
         match me_fs_rs::parse(d) {
             Ok(fpt) => {
                 println!("{:#08?}", fpt.header);
             }
             Err(e) => println!("ME parser: {e}"),
         }
+        */
     } else {
         println!("  ME: None");
     }
